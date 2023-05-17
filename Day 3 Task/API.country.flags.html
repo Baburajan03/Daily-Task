@@ -1,0 +1,25 @@
+<!-- calling API and displaying Flags -->
+
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>COUNTRIES</title>
+</head>
+<body>s
+    <h1>calling API and displaying Flags</h1>
+    <script>
+        function reqListener() {
+  let data = JSON.parse(this.responseText);
+  for(i=0;i< data.length; i++)
+  {
+    console.log(data[i].flags)
+  }
+}
+
+const req = new XMLHttpRequest();
+req.addEventListener("load", reqListener);
+req.open("GET", "https://restcountries.com/v3.1/all");
+req.send();
+    </script>
+</body>
