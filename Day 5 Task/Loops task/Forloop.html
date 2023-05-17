@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>COUNTRIES</title>
+</head>
+<body>
+  <h1>
+    Example for for loop
+  </h1>
+    <script>
+        function reqListener()
+         {
+  let data = JSON.parse(this.responseText);
+  for(let i=0;i<data.length;i++)
+  {
+    console.log(data[i].name.common)
+    console.log(data[i].capital)
+  }  
+}
+const req = new XMLHttpRequest();
+req.addEventListener("load", reqListener);
+req.open("GET", "https://restcountries.com/v3.1/all");
+req.send();
+    </script>
+</body>
+</html>
