@@ -1,0 +1,15 @@
+.mandatory{
+color:red
+}
+.star{
+    color:gold
+}
+.width{
+   text-align: center;
+}
+td {
+    width: 200px;
+}
+.additional{
+    height: 100px;
+}
